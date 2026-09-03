@@ -1,0 +1,24 @@
+{
+  "name": "h.o.l.m.e.v-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "H.O.L.M.E.V - Multimodal Personal AI Operating System",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run dev --workspace=services/api",
+    "dev:agent": "npm run dev --workspace=services/pc-agent",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:api": "npm run build --workspace=services/api",
+    "build:agent": "npm run build --workspace=services/pc-agent",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
